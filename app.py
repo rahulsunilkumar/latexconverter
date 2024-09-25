@@ -5,7 +5,7 @@ def latex_converter(input_text):
     # Replace common phrases with their LaTeX equivalents
     replacements = {
         "for all": "\\forall",                 # ∀
-        "there exists": "\\exists",            # ∃
+        "there exists": "\\text{ $\\exists$ }",            # ∃
         "such that": "\\text{ s.t. }",           # s.t.
         " in ": " \\in ",                      # ∈
         "real numbers": "\\mathbb{R}",         # ℝ
