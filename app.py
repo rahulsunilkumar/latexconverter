@@ -48,6 +48,12 @@ if st.button("Convert to LaTeX"):
 
     # Render LaTeX instead of just displaying the code
     st.latex(latex_output)
+    
 
     # Optionally show the LaTeX code for users who want to copy it
     st.text_area("LaTeX Code", value=latex_output, height=100, disabled=True)
+
+    # Create a copy button
+    if st.button("Copy LaTeX Code"):
+        pyperclip.copy(latex_output)
+        st.success("LaTeX code copied to clipboard!")
