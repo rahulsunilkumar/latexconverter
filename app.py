@@ -8,6 +8,11 @@ def latex_converter(input_text):
         "there exists": "\\exists",            # ∃
         "such that": "\\text{s.t.}",           # s.t.
         " in ": " \\in ",                      # ∈
+        "real numbers": "\\mathbb{R}",         # ℝ
+        "rational numbers": "\\mathbb{Q}",     # ℚ
+        "integers": "\\mathbb{Z}",             # ℤ
+        "natural numbers": "\\mathbb{N}",      # ℕ
+        "complex numbers": "\\mathbb{C}",      # ℂ
         "and": "\\wedge",                      # ∧
         "or": "\\vee",                         # ∨
         "not": "\\neg",                        # ¬
@@ -34,8 +39,9 @@ input_text = st.text_area("Enter text with math phrases:")
 # Button to trigger conversion
 if st.button("Convert to LaTeX"):
     latex_output = latex_converter(input_text)
-    st.text_area("LaTeX Output", value=latex_output, height=200)
 
-    # Display LaTeX code for copying
-    st.write("Copy the LaTeX code below:")
-    st.code(latex_output, language='latex')
+    # Render LaTeX instead of just displaying the code
+    st.latex(latex_output)
+
+    # Optionally show the LaTeX code for users who want to copy it
+    st.text_area("LaTeX Code", value=latex_output, height=100, disabled=True)
