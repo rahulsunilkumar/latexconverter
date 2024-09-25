@@ -16,6 +16,10 @@ def latex_converter(input_text):
         " and ": "\\wedge",                      # ∧
         " or ": "\\vee",                         # ∨
         " not ": "\\neg",                        # ¬
+        "less than or equal to": "\\leq",
+        "greater than or equal to": "\\geq",
+        "<=": "\\leq",
+        ">=": "\\geq",
         "if and only if": "\\iff",             # ↔
         "implies": "\\implies",                # →
         "integral of": "\\int",                # ∫
