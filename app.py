@@ -1,4 +1,5 @@
 import streamlit as st
+import re
 
 # Function to convert text into LaTeX math symbols
 def latex_converter(input_text):
@@ -15,9 +16,15 @@ def latex_converter(input_text):
         "complex numbers": "\\mathbb{C}",      # ℂ
         " and ": "\\wedge",                      # ∧
         " or ": "\\vee",                         # ∨
-        "not": "\\neg",                        # ¬
+        " not ": "\\neg",                        # ¬
         "if and only if": "\\iff",             # ↔
         "implies": "\\implies",                # →
+        "integral of": "\\int",                # ∫
+        "sum of": "\\sum",                     # Σ
+        "equals": "=",                         # =
+        "converges to": "\\to",                # →
+        "function": "f : ",                    # function notation
+        " to ": "\\to",                          # →
         "sqrt": "\\sqrt",                      # √
         "^": "^",                              # Exponentiation
         "_": "_"                               # Subscripts
@@ -27,7 +34,11 @@ def latex_converter(input_text):
     # Replace text with corresponding LaTeX symbols
     for key, value in replacements.items():
         input_text = input_text.replace(key, value)
-    
+
+    # Capture any remaining text that was not replaced and convert it to \text{}
+    # This regex matches any alphabetic word (not already in a LaTeX format) and wraps it in \text{}
+    input_text = re.sub(r'([a-zA-Z]+)', r'\\text{\1}', input_text)
+
     return input_text
 
 # Streamlit app layout
