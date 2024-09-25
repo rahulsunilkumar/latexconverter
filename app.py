@@ -37,7 +37,7 @@ def latex_converter(input_text):
 
     # Capture any remaining text that was not replaced and convert it to \text{}
     # This regex matches any alphabetic word (not already in a LaTeX format) and wraps it in \text{}
-    input_text = re.sub(r'([a-zA-Z]+)', r'\\text{\1}', input_text)
+    input_text = re.sub(r'([a-zA-Z]+)', r'\\text{ \1 }', input_text)
 
     return input_text
 
