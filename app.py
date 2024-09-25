@@ -6,7 +6,7 @@ def latex_converter(input_text):
     replacements = {
         "for all": "\\forall",                 # ∀
         "there exists": "\\exists",            # ∃
-        "such that": "\\text{s.t.}",           # s.t.
+        "such that": "\\text{ s.t. }",           # s.t.
         " in ": " \\in ",                      # ∈
         "real numbers": "\\mathbb{R}",         # ℝ
         "rational numbers": "\\mathbb{Q}",     # ℚ
