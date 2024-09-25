@@ -1,5 +1,4 @@
 import streamlit as st
-import re
 
 # Function to convert text into LaTeX math symbols
 def latex_converter(input_text):
@@ -34,10 +33,6 @@ def latex_converter(input_text):
     # Replace text with corresponding LaTeX symbols
     for key, value in replacements.items():
         input_text = input_text.replace(key, value)
-
-    # Capture any remaining text that was not replaced and convert it to \text{}
-    # This regex matches any alphabetic word (not already in a LaTeX format) and wraps it in \text{}
-    input_text = re.sub(r'([a-zA-Z]+)', r'\\text{ \1 }', input_text)
 
     return input_text
 
