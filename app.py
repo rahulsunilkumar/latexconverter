@@ -4,29 +4,27 @@ import streamlit as st
 def latex_converter(input_text):
     # Replace common phrases with their LaTeX equivalents
     replacements = {
-        "for all": "\\forall",                 # ∀
+        "for all": "\\forall ",                 # ∀
         "there exists": "\\text{ $\\exists$ }",            # ∃
         "such that": "\\text{ s.t. }",           # s.t.
         " in ": " \\in ",                      # ∈
-        "real numbers": "\\mathbb{R}",         # ℝ
-        "rational numbers": "\\mathbb{Q}",     # ℚ
-        "integers": "\\mathbb{Z}",             # ℤ
-        "natural numbers": "\\mathbb{N}",      # ℕ
-        "complex numbers": "\\mathbb{C}",      # ℂ
-        " and ": "\\wedge",                      # ∧
-        " or ": "\\vee",                         # ∨
-        " not ": "\\neg",                        # ¬
-        "less than or equal to": "\\leq",
-        "greater than or equal to": "\\geq",
-        "<=": "\\leq",
-        ">=": "\\geq",
-        "if and only if": "\\iff",             # ↔
-        "implies": "\\implies",                # →
-        "integral of": "\\int",                # ∫
-        "sum of": "\\sum",                     # Σ
-        "equals": "=",                         # =
-        "converges to": "\\to",                # →
-        "function": "f : ",                    # function notation
+        "real numbers": "\\mathbb{R} ",         # ℝ
+        "rational numbers": "\\mathbb{Q} ",     # ℚ
+        "integers": "\\mathbb{Z} ",             # ℤ
+        "natural numbers": "\\mathbb{N} ",      # ℕ
+        "complex numbers": "\\mathbb{C} ",      # ℂ
+        " and ": "\\wedge ",                      # ∧
+        " or ": "\\vee ",                         # ∨
+        " not ": "\\neg ",                        # ¬
+        "<=": "\\leq ",
+        ">=": "\\geq ",
+        "if and only if": "\\iff ",             # ↔
+        "implies": "\\implies ",                # →
+        "integral of": "\\int ",                # ∫
+        "sum of": "\\sum ",                     # Σ
+        "equals": " = ",                         # =
+        "converges to": "\\to ",                # →
+        "function of": "f : ",                    # function notation
         " to ": "\\to",                          # →
         "sqrt": "\\sqrt",                      # √
         "^": "^",                              # Exponentiation
