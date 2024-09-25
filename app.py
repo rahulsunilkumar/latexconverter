@@ -13,8 +13,8 @@ def latex_converter(input_text):
         "integers": "\\mathbb{Z}",             # ℤ
         "natural numbers": "\\mathbb{N}",      # ℕ
         "complex numbers": "\\mathbb{C}",      # ℂ
-        "and": "\\wedge",                      # ∧
-        "or": "\\vee",                         # ∨
+        " and ": "\\wedge",                      # ∧
+        " or ": "\\vee",                         # ∨
         "not": "\\neg",                        # ¬
         "if and only if": "\\iff",             # ↔
         "implies": "\\implies",                # →
